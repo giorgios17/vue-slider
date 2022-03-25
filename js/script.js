@@ -46,7 +46,16 @@ const app = new Vue(
 
         },
         methods: {
-
+            nextImage() {
+                if (this.slideIndex < this.slides.length - 1) {
+                    this.slideIndex++;
+                }
+            },
+            prevImage() {
+                if (this.slideIndex > 0) {
+                    this.slideIndex--;
+                }
+            }
         }
     }
 );
