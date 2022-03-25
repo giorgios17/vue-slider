@@ -50,10 +50,16 @@ const app = new Vue(
                 if (this.slideIndex < this.slides.length - 1) {
                     this.slideIndex++;
                 }
+                else {
+                    this.slideIndex = 0;
+                }
             },
             prevImage() {
                 if (this.slideIndex > 0) {
                     this.slideIndex--;
+                }
+                else {
+                    this.slideIndex = this.slides.length - 1;
                 }
             }
         }
