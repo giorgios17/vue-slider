@@ -62,10 +62,16 @@ const app = new Vue(
                     this.slideIndex = this.slides.length - 1;
                 }
             },
+            //BONUS 1
             selectOnClick(item) {
                 const indexClicked = this.slides.findIndex((slide) => slide.title === item.title);
                 console.log(indexClicked);
                 this.slideIndex = indexClicked;
+
+            },
+            //BONUS 2
+            timer: function () {
+                setInterval(this.nextImage, 3000)
             }
         }
     }
