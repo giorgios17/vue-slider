@@ -69,9 +69,12 @@ const app = new Vue(
                 this.slideIndex = indexClicked;
 
             },
+            autoPlay() {
+                this.nextImage()
+            },
             //BONUS 2
             timer: function () {
-                setInterval(this.nextImage, 3000)
+                setInterval(this.autoPlay, 3000)
             }
         }
     }
