@@ -41,9 +41,7 @@ const app = new Vue(
         data: {
             slides,
             slideIndex: 0,
-
-
-
+            autoPlayImg: undefined
         },
         methods: {
             nextImage() {
@@ -71,10 +69,10 @@ const app = new Vue(
             },
             //BONUS 2
             timer: function () {
-                autoPlayImg = setInterval(this.nextImage, 3000)
+                this.autoPlayImg = setInterval(this.nextImage, 3000)
             },
             stopTimer: function () {
-                clearInterval(autoPlayImg)
+                clearInterval(this.autoPlayImg)
             }
         }
     }
